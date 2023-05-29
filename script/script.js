@@ -34,6 +34,8 @@ generateTicket.addEventListener('click', function(){
     // Recovery element from DOM
     const userNameTicket = document.getElementById('user-name-ticket');
     const typeTicket = document.getElementById('type-ticket');
+    const priceTicketPlaceholder = document.getElementById('price-ticket');
+    const userNoticeDiscountPlaceholder = document.getElementById('user-notice-discount');
 
     // Calculate ticket price
     const priceTicket = userKm * kmPrice;
@@ -43,25 +45,22 @@ generateTicket.addEventListener('click', function(){
 
     let finalTicketPrice = priceTicket
 
-    let typeTicketCalc = 'Biglietto Standard'
+    let typeTicketCalc = 'Biglietto Standard*'
 
-    let userNoticeDiscount = 'Considerata la sua età non rientra in alcuna fascia per poter usufruire dello sconto sul biglietto.';
+    let userNoticeDiscount = '*Considerata la sua età non rientra in alcuna fascia per poter usufruire dello sconto sul biglietto.';
 
     if (userAge < 18) {
         finalTicketPrice -= finalTicketPrice * youthDiscount;
-        userNoticeDiscount = 'Considerata la sua fascia d\'età rientra nello sconto giovani del 20%'
+        userNoticeDiscount = '*Considerata la sua fascia d\'età rientra nello sconto giovani del 20%'
         typeTicketCalc = 'Biglietto Under 18'
     }   else if (userAge >= 65) {
         finalTicketPrice -= finalTicketPrice * seniorDiscount;
-        userNoticeDiscount = 'Considerata la sua fascia d\'età rientra nello sconto anziani del 40%';
+        userNoticeDiscount = '*Considerata la sua fascia d\'età rientra nello sconto anziani del 40%';
         typeTicketCalc = 'Biglietto Over 65'
     }
 
-    console.log(typeTicketCalc);
+    console.log(typeTicketCalc, userNoticeDiscount, finalTicketPrice.toFixed(2));
 
-    console.log(userNoticeDiscount);
-
-    console.log(finalTicketPrice.toFixed(2));
 
     // Write final price, discount, Name, ticket type, carriage CP and Code into DOM 
 
@@ -72,7 +71,7 @@ generateTicket.addEventListener('click', function(){
     typeTicket.innerText = typeTicketCalc;
 
     // Price Ticket
-    priceTicketPlaceholder.innerText = finalTicketPrice.toFixed(2);
+    priceTicketPlaceholder.innerText = finalTicketPrice.toFixed(2) + 'euro';
 
     // Discount
     userNoticeDiscountPlaceholder.innerText = userNoticeDiscount;
@@ -87,23 +86,6 @@ generateTicket.addEventListener('click', function(){
     
 
     
-
-
-    // Write Discount in the DOM
-
-
-
-    // BONUS
-
-    // insert km route in DOM
-
-    const kmRoutePlaceholder = document.getElementById('km-route');
-    kmRoutePlaceholder.innerText = userKm + 'km';
-
-    // insert age user in DOM
-
-    const userAgePlaceholder = document.getElementById('user-age');
-    userAgePlaceholder.innerText = userAge + ' ' + 'anni';
 
    
 
