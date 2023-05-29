@@ -94,6 +94,14 @@ generateTicket.addEventListener('click', function(){
     // CP Code random number indo DOM
     cpCode.innerText = randomCpCode
 
+    // Ticket Display when click button generate
+
+    const ticket = document.querySelector('.ticket');
+    console.log(ticket);
+    
+    ticket.classList.remove('d-none')
+
+
 })
  
 
