@@ -28,9 +28,9 @@ generateTicket.addEventListener('click', function(){
         alert ('E necessario inserire un numero maggiore di 1');
     } else {
     // Recovery input value
-    const userName = userNameInput.value;
-    const userKm = userKmInput.value;
-    const userAge = userAgeInput.value;
+    const userName = userNameInput.value.trim();
+    const userKm = parseInt(userKmInput.value);
+    const userAge = parseInt(userAgeInput.value);
     console.log(userName, userKm, userAge);
 
     // Recovery element from DOM
