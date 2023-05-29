@@ -104,7 +104,7 @@ generateTicket.addEventListener('click', function(){
         console.log(ticket);
         
         ticket.classList.remove('d-none');
-        }
+    }
 })
  
 
