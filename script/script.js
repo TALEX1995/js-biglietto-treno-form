@@ -36,6 +36,8 @@ generateTicket.addEventListener('click', function(){
     const typeTicket = document.getElementById('type-ticket');
     const priceTicketPlaceholder = document.getElementById('price-ticket');
     const userNoticeDiscountPlaceholder = document.getElementById('user-notice-discount');
+    const carriage = document.getElementById('carriage');
+    const cpCode = document.getElementById('cp-code');
 
     // Calculate ticket price
     const priceTicket = userKm * kmPrice;
@@ -61,6 +63,16 @@ generateTicket.addEventListener('click', function(){
 
     console.log(typeTicketCalc, userNoticeDiscount, finalTicketPrice.toFixed(2));
 
+    // Carriage Random Number
+
+    const randomCarriageNumber = Math.floor((Math.random() * 10) +1);
+    console.log(randomCarriageNumber);
+
+    // CP Code random number
+
+    const randomCpCode = Math.floor((Math.random() * (100000 - 10000)) +10000);
+    console.log(randomCpCode);
+
 
     // Write final price, discount, Name, ticket type, carriage CP and Code into DOM 
 
@@ -75,6 +87,12 @@ generateTicket.addEventListener('click', function(){
 
     // Discount
     userNoticeDiscountPlaceholder.innerText = userNoticeDiscount;
+
+    // Carriage random number into DOM
+    carriage.innerText = randomCarriageNumber
+
+    // CP Code random number indo DOM
+    cpCode.innerText = randomCpCode
 
 })
  
