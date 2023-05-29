@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.main-app {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/freccia-rossa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.card {
+    max-width: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#price-ticket {
+    text-decoration: underline;
+}
+
+p {
+    padding: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    background-color: grey;
+    margin: 1.5rem;
+}
+
+.button-ticket {
+    display: flex;
+    justify-content: space-between;
+}
+
+
