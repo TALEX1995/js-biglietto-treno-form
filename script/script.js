@@ -4,9 +4,9 @@ console.log('JS OK');
 
 // Take the element from DOM
 
-const userName = document.getElementById('user-name');
-const userKm = document.getElementById('km-route');
-const userAge = document.getElementById('user-age');
+const userNameInput = document.getElementById('user-name');
+const userKmInput = document.getElementById('km-route');
+const userAgeInput = document.getElementById('user-age');
 const generateTicket = document.getElementById('generate-ticket');
 
 // Added variable price for km and discount
@@ -20,13 +20,20 @@ const seniorDiscount = 40 / 100;
 
 // Validation
 
-generateTicket.addEventListener('click', function(){
-    
-}
- 
+
 
 // Calculate the value input at the btn click
 
+generateTicket.addEventListener('click', function(){
+    // Recovery input value
+    const userName = userNameInput.value;
+    const userKm = userKmInput.value;
+    const userAge = userAgeInput.value;
+    console.log(userName, userKm, userAge);
+
+
+})
+ 
 
 
     // Calculate ticket price
