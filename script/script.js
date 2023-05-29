@@ -101,7 +101,6 @@ generateTicket.addEventListener('click', function(){
     
     ticket.classList.remove('d-none')
 
-
 })
  
 

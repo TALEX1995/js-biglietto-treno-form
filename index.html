@@ -9,55 +9,56 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="main-app">
+    <div class="main-app container-fluid">
         <div class="row justify-content-center align-items-center">
-            <div class="col-4 d-flex flex-column align-items-center">
+            <div class="col-4 d-flex flex-column align-items-center mt-3">
             <!-- Input Name User -->
                 <label for="user-name">Nome Cognome</label>
                 <input class="text-center" type="text" id="user-name" value="Alex">
             </div>
 
             <!-- Input km route -->
-            <div class="col-4 d-flex flex-column align-items-center">
+            <div class="col-4 d-flex flex-column align-items-center mt-3">
                 <label for="km-route">Km da percorrere</label>
                 <input class="text-center" type="number" id="km-route" min="1" value="30">
             </div>
 
             <!-- Input Age User -->
-            <div class="col-4 d-flex flex-column align-items-center">
+            <div class="col-4 d-flex flex-column align-items-center mt-3">
                 <label for="user-age">Età</label>
                 <input class="text-center" type="number" id="user-age" min="1" value="35">
             </div>
 
             <!-- Button ticket generate-->
-            <div class="col-12 button-ticket justify-content-center">
+            <div class="col-12 button-ticket d-flex justify-content-center">
                 <a class="btn btn-secondary" href="#">Anulla</a>
                 <a class="btn btn-primary" id="generate-ticket" href="#">Genera</a>
             </div>
         </div>
-        <div class="row d-none ticket">
+        <div class="row d-none ticket mt-3 ps-3">
+            <h2 class="m-0 py-1">Dettagli Passeggero</h2>
             <!-- Ticket Name Passenger -->
-            <div class="col-auto">
+            <div class="col-3 passenger-name">
                 <span>Nome Passeggero</span>
                 <span id="user-name-ticket"></span>
             </div>
             <!-- Ticket Type -->
-            <div class="col-auto">
+            <div class="col-2">
                 <span>Offerta</span>
                 <span id="type-ticket"></span>
             </div>
             <!-- Carriage Number -->
-            <div class="col-auto">
+            <div class="col-2">
                 <span>Carrozza</span>
                 <span id="carriage"></span>
             </div>
             <!-- CP Code Number -->
-            <div class="col-auto">
+            <div class="col-2">
                 <span>Codice CP</span>
                 <span id="cp-code"></span>
             </div>
             <!-- Price ticket -->
-            <div class="col-auto">
+            <div class="col-3">
                 <span>Costo Biglietto</span>
                 <span id="price-ticket"></span>
             </div>

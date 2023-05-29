@@ -1,19 +1,18 @@
+/* Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-body {
-    font-size: 1.5rem;
-    color: white;
-}
+/* Main App */
 
 .main-app {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url(../img/freccia-rossa.jpg);
@@ -22,19 +21,19 @@ body {
     position: relative;
 }
 
+/* Generics */
 
-.card {
-    max-width: 40%;
-    background-color: rgba(0, 0, 0, 0.5);
+body {
+    font-size: 1.5rem;
+    color: white;
 }
 
-#price-ticket {
-    text-decoration: underline;
+.row {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-p {
-    padding: 1.5rem;
-}
+/* Input Page */
 
 a {
     text-decoration: none;
@@ -44,9 +43,34 @@ a {
     margin: 1.5rem;
 }
 
-.button-ticket {
+
+/* Ticket */
+
+.ticket div {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
+
+h2 {
+    border-bottom: 1px solid white;
+}
+
+span + span {
+    padding: 2rem 0;
+}
+
+.passenger-name {
+    background-color: grey;
+}
+
+#price-ticket {
+    text-decoration: underline;
+}
+
+#user-notice-discount {
+    border-top: 1px solid white;
+    padding: 1.5rem;
+}
+
 
 
