@@ -12,22 +12,23 @@
     <div class="main-app">
         <div class="card">
             <label for="user-name">Nome Cognome</label>
-            <input type="text" id="user-name">
+            <input type="text" id="user-name" value="Alex">
             <label for="km-route">Km da percorrere</label>
-            <input type="number" id="km-route" min="1">
+            <input type="number" id="km-route" min="1" value="30">
             <label for="user-age">Età</label>
-            <input type="number" id="user-age" min="1">
-            
-            
-            <p id="user-notice-discount"></p>
-            <p>Il prezzo del biglieto quindi risulta essere di <span id="price-ticket"></span> euro</p>
+            <input type="number" id="user-age" min="1" value="35">
             <div class="button-ticket">
                 <a class="btn btn-secondary" href="#">Anulla</a>
-                <a class="btn btn-primary" href="#">Genera</a>
+                <a class="btn btn-primary" id="generate-ticket" href="#">Genera</a>
             </div>
+        </div>
+        <div>
+            <p>Il prezzo del biglieto quindi risulta essere di <span id="price-ticket"></span> euro</p>
+            
+            <p id="user-notice-discount"></p>
         </div>
     </div>  
 
-    <!-- <script src="script/script.js"></script> -->
+    <script src="script/script.js"></script>
 </body>
 </html>

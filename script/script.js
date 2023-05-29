@@ -4,24 +4,10 @@ console.log('JS OK');
 
 // Take the element from DOM
 
-const priceTicketPlaceholder = document.getElementById('price-ticket');
-console.log(priceTicketPlaceholder);
-
-const userNoticeDiscountPlaceholder = document.getElementById('user-notice-discount');
-console.log(userNoticeDiscountPlaceholder);
-
-
-// KM Request to the user
-
-const userKm = parseInt(prompt('Please enter the km of the route', 37));
-console.log(userKm);
-
-
-// Request User Age
-
-const userAge = parseInt(prompt('Please enter your age', 22));
-console.log(userAge);
-
+const userName = document.getElementById('user-name');
+const userKm = document.getElementById('km-route');
+const userAge = document.getElementById('user-age');
+const generateTicket = document.getElementById('generate-ticket');
 
 // Added variable price for km and discount
 
@@ -34,12 +20,15 @@ const seniorDiscount = 40 / 100;
 
 // Validation
 
-if (isNaN(userKm) || isNaN(userAge)) {
-    alert ('E necessario inserire un numero');
-} else if (userKm < 1 || userAge < 1) {
-    alert ('E necessario inserire un numero maggiore di 1');
-} else {
+generateTicket.addEventListener('click', function(){
     
+}
+ 
+
+// Calculate the value input at the btn click
+
+
+
     // Calculate ticket price
 
     const priceTicket = userKm * kmPrice;
@@ -88,8 +77,4 @@ if (isNaN(userKm) || isNaN(userAge)) {
     userAgePlaceholder.innerText = userAge + ' ' + 'anni';
 
    
-
-    
-    
-}
 
