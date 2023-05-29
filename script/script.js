@@ -93,8 +93,3 @@ if (isNaN(userKm) || isNaN(userAge)) {
     
 }
 
-
-
-// Provare ad aggiungere una costante = Considerata la sua età non rientra in alcuna fascia per poter usufruire dello sconto sul biglietto.
-// Andare a cambiare la costante sotto ai 18 anni inserendo (considerata la sua fascia d'età rientra nello sconto giovani del 20%)
-// Andare a cambiare la costante sopra i 65 anni inserendo (considerata la sua fascia d'età rientra nello sconto anziani del 40%)
