@@ -19,13 +19,14 @@ const youthDiscount = 20 / 100;
 const seniorDiscount = 40 / 100;
 
 
-// Validation
-
-
-
-// Calculate the value input at the btn click
+// Add event on click button + validation
 
 generateTicket.addEventListener('click', function(){
+    if (isNaN(userKmInput.value) || isNaN(userAgeInput.value)) {
+        alert ('E necessario inserire un numero');
+    } else if (userKmInput.value < 1 || userAgeInput.value < 1) {
+        alert ('E necessario inserire un numero maggiore di 1');
+    } else {
     // Recovery input value
     const userName = userNameInput.value;
     const userKm = userKmInput.value;
@@ -101,6 +102,7 @@ generateTicket.addEventListener('click', function(){
     console.log(ticket);
     
     ticket.classList.remove('d-none');
+    }
 })
  
 
@@ -111,6 +113,10 @@ resetInput.addEventListener('click', function(){
     userNameInput.value = '';
     userKmInput.value = '';
     userAgeInput.value = '';
+
+    // Added d-none on reset button click
+    const ticket = document.querySelector('.ticket');
+    ticket.classList.add('d-none');
 })
 
 
