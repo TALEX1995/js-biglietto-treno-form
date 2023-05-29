@@ -8,6 +8,7 @@ const userNameInput = document.getElementById('user-name');
 const userKmInput = document.getElementById('km-route');
 const userAgeInput = document.getElementById('user-age');
 const generateTicket = document.getElementById('generate-ticket');
+const resetInput = document.getElementById('reset-input');
 
 // Added variable price for km and discount
 
@@ -99,13 +100,18 @@ generateTicket.addEventListener('click', function(){
     const ticket = document.querySelector('.ticket');
     console.log(ticket);
     
-    ticket.classList.remove('d-none')
-
+    ticket.classList.remove('d-none');
 })
  
 
 
-    
+resetInput.addEventListener('click', function(){
+
+    // Reset button
+    userNameInput.value = '';
+    userKmInput.value = '';
+    userAgeInput.value = '';
+})
 
 
     
